@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="RegistrationMasterPage.master.cs" Inherits="RegistrationMasterPage"  %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body >
+    <form id="form1" runat="server">
+
+        <div class="container-fluid border-bottom">
+            <div class="row">
+                <div class="col-lg-3 ">
+                    <asp:Image runat="server" ImageUrl="imges/Brand_logo.jpg" CssClass="" AlternateText="Brand logo" Height="130px" />
+                    
+                </div>
+                <div class="col-lg-8">
+                    <label class="h1" style="margin-top: 50px">
+                        Society Management System
+                        <label class="h3">(BSITF17M026)</label></label>
+                </div>
+                
+            </div>
+            <div >
+                <nav class="col-sm-12 col-md-12 col-lg-12 btn-group" >
+                    <asp:HyperLink runat="server" NavigateUrl="RootUserLogin.aspx" CssClass="btn btn-sm btn-secondary form-control" Text="Root Login"></asp:HyperLink>
+                    <asp:HyperLink runat="server" NavigateUrl="AdminLogin.aspx" CssClass="btn btn-sm btn-secondary form-control" Text="Admin Login"></asp:HyperLink>
+
+                </nav>
+
+            </div>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <div class="col-lg-12">
+                <footer class="border-top" style=" margin-top: 1%">
+                    <h5>&copy;2021 Society Management System. All Right Reserved to Mustansar Hussain (BSITF17M026)</h5>
+                </footer>
+            </div>
+
+        </div>
+    </form>
+</body>
+</html>

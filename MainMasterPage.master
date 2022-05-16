@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MainMasterPage.master.cs" Inherits="MainMasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Admin Panel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container-fluid">
+            <div class="row">
+                <div class=" col-lg-3 ">
+                    <asp:Image runat="server" ImageUrl="imges/Brand_logo.jpg" AlternateText="Brand logo" Height="130px" />
+                </div>
+                <div class="col-lg-8">
+                    <label class=" h1 float-left" style="margin-top: 50px">
+                        Society Management System
+                        <label class=" h3">(BSITF17M026)</label></label>
+                </div>
+            </div>
+            <div class=" col-lg-12 ">
+                <nav class=" col-md-9 col-lg-9 btn-group ">
+                    <asp:HyperLink runat="server" NavigateUrl="SocietySetup.aspx" CssClass="btn btn-sm btn-secondary" Text="Society Setup"></asp:HyperLink>
+                    <asp:HyperLink runat="server" NavigateUrl="HouseSetup.aspx" CssClass="btn btn-sm btn-secondary" Text="House Type Setup"></asp:HyperLink>
+                    <asp:HyperLink runat="server" NavigateUrl="HouseTypeSetup.aspx" CssClass="btn btn-sm btn-secondary" Text="House Type Setup"></asp:HyperLink>
+
+                </nav>
+                <div class="col-md-2 col-lg-2 float-right">
+                    <asp:HyperLink runat="server" Width="200px" NavigateUrl="Logout.aspx" CssClass="btn btn-sm btn-secondary " Text="Logout"></asp:HyperLink>
+                </div>
+            </div>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+        </div>
+    </form>
+</body>
+</html>
